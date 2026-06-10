@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('alt_name', models.CharField(default='', max_length=255)),
                 ('latitude', models.DecimalField(decimal_places=6, default=0, max_digits=9)),
                 ('longitude', models.DecimalField(decimal_places=6, default=0, max_digits=9)),
-                ('provinsi', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='kabkota', to='polls.provinsi')),
+                ('provinsi', models.ForeignKey(db_column='province_id', on_delete=django.db.models.deletion.CASCADE, related_name='kabkota', to='polls.provinsi')),
             ],
             options={
                 'verbose_name_plural': 'Kabkota',
